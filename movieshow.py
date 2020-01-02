@@ -23,6 +23,7 @@ try:
                 break
     cv2.destroyAllWindows(window_name)
     capture.release()
+
 except:#エラー処理
     print("Error:",sys.exc_info()[0])
     print(sys.exc_info()[1])
