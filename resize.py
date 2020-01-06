@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*
+#画像ファイルのリサイズ
 
 import cv2
 

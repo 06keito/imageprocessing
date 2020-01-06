@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*
+#特徴量検出-コーナー検出
 
 import cv2
 
