@@ -1,6 +1,6 @@
 import cv2
 
-path = "C:/Users/keito/Documents/GitHub/imageprocessing/1.jpg"
+path = "pictures/sample1.jpg"
 img = cv2.imread(path)
 cut = cv2.imread(path)
 
@@ -18,11 +18,14 @@ for i in range(0,height,square_size):
     cv2.line(cut,(0,i),(width,i),(255,0,0))
 
 Player_A = img[560:720, 320:480]
-Player_B = img[560:720, 800:960]
+Player_B = img[610:670, 890:930]
 
 cv2.imshow("cut",cut)
 cv2.imshow("Player_A",Player_A)
 cv2.imshow("Player_B",Player_B)
+
+cv2.imwrite("pictures/Player_A.jpg",Player_A)
+cv2.imwrite("pictures/Player_B.jpg",Player_B)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

@@ -2,7 +2,7 @@
 
 import cv2
 
-path = "C:/Users/keito/picture/SSBU_PERCENT/1.jpg"
+path = "pictures/1.jpg"
 
 try:
     img = cv2.imread(path)
@@ -19,7 +19,7 @@ try:
 
     dst = cv2.resize(img, dsize=(80,80))
     #dst = cv2.resize(img, (int(width*SCALE1), int(height*SCALE1)))
-    cv2.imwrite('C:/Users/keito/picture/SSBU_PERCENT/resize8080.jpg', dst)
+    #cv2.imwrite('C:/Users/keito/picture/SSBU_PERCENT/resize8080.jpg', dst)
     cv2.imshow('dst1', dst)
 
     print(width,height)

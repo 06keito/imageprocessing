@@ -1,8 +1,8 @@
 #テンプレートマッチング
 import cv2
 
-path_A = "background.jpg"
-path_B = "1.jpg"
+path_A = "pictures/Player_A.jpg"
+path_B = "pictures/1.jpg"
 
 try:
     img = cv2.imread(path_A)
