@@ -21,6 +21,10 @@ Player_B = img_thresh[610:670, 800:960]#ポート番号2のプレイヤーの状
 
 percent = resize_fillblack.fillblack(percent)#画像のサイズをそろえるための処理
 
+SCALE = 1.5
+percent = cv2.resize(percent,(int(percent.shape[1]*SCALE),int(percent.shape[0]*SCALE)))
+Player_A = cv2.resize(Player_A,(int(Player_A.shape[1]*SCALE),int(Player_A.shape[0]*SCALE)))
+
 
 detector = cv2.AKAZE_create()
 
@@ -30,7 +34,14 @@ bf = cv2.BFMatcher(cv2.NORM_HAMMING)
 
 matches = bf.knnMatch(des1, des2, k=2)
 
-img3 = cv2.drawMatchesKnn(Player_A, kp1, percent, kp2, matches, None, flags=2)
+ratio = 0.9
+good = []
+for m, n in matches:
+    if m.distance < ratio * n.distance:
+        good.append([m])
+
+
+img3 = cv2.drawMatchesKnn(Player_A, kp1, percent, kp2, good, None, flags=2)
 
 cv2.imshow("Player_A",Player_A)
 cv2.imshow("Player_B",Player_B)
