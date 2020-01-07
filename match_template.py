@@ -1,8 +1,9 @@
 #テンプレートマッチング
 import cv2
 
-path_A = "pictures/Player_A.jpg"
-path_B = "pictures/1.jpg"
+read_path_A = ""
+read_path_B = ""
+save_path = ""
 
 try:
     img = cv2.imread(path_A)
@@ -21,7 +22,7 @@ try:
     cv2.rectangle(dst, pos, (pos[0] + templ.shape[1], pos[1] + templ.shape[0]),
                   (0, 0, 255), 2)
 
-    #cv2.imwrite('c:/temp/dst_match.jpg', dst)
+    #cv2.imwrite(save_path, dst)
     cv2.imshow('dst', dst)
 
     cv2.waitKey(0)

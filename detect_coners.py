@@ -2,7 +2,8 @@
 
 import cv2
 
-path = "C:/Users/keito/picture/SSBU_PERCENT/resize8080.jpg"
+read_path = ""
+save_path = ""
 
 try:
     MAX_CORNERS = 50
@@ -25,7 +26,7 @@ try:
         x,y = i.ravel()
         cv2.circle(img, (x,y), 4, (255, 255, 0), 2)
 
-    #cv2.imwrite('c:/temp/corners.jpg', img)
+    #cv2.imwrite(save_path, img)
     cv2.imshow('img', img)
 
     cv2.waitKey(0)

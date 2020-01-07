@@ -1,8 +1,9 @@
 import cv2
 
-path = "pictures/100%.jpg"
-img = cv2.imread(path)
-cut = cv2.imread(path)
+read_path = "pictures/100%.jpg"
+
+img = cv2.imread(read_path)
+cut = cv2.imread(read_path)
 
 height, width, channels = img.shape[:3]
 print("width: " + str(width))
