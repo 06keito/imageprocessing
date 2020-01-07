@@ -1,15 +1,15 @@
 #テンプレートマッチング
 import cv2
 
-read_path_A = ""
-read_path_B = ""
+read_path_A = "pictures/testimage.jpg"
+read_path_B = "pictures/percent/Binarization_percent/Binarization_8_percent.jpg"
 save_path = ""
 
 try:
-    img = cv2.imread(path_A)
-    templ = cv2.imread(path_B)
+    img = cv2.imread(read_path_A)
+    templ = cv2.imread(read_path_B)
 
-    if img is None or templ is None:
+    if img is None:
         print ('ファイルを読み込めません。')
         import sys
         sys.exit()
@@ -22,7 +22,6 @@ try:
     cv2.rectangle(dst, pos, (pos[0] + templ.shape[1], pos[1] + templ.shape[0]),
                   (0, 0, 255), 2)
 
-    #cv2.imwrite(save_path, dst)
     cv2.imshow('dst', dst)
 
     cv2.waitKey(0)

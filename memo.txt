@@ -1,0 +1,4 @@
+すべてを統合させるファイルはmaching.pyにする
+とりあえず完成させる
+特徴量で判断
+https://m12watanabe1a.hatenablog.com/entry/2018/10/14/201503
