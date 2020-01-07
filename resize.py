@@ -2,7 +2,7 @@
 
 import cv2
 
-path = "pictures/1.jpg"
+path = "pictures/Player_B.jpg"
 
 try:
     img = cv2.imread(path)
