@@ -34,7 +34,7 @@ bf = cv2.BFMatcher(cv2.NORM_HAMMING)
 
 matches = bf.knnMatch(des1, des2, k=2)
 
-ratio = 0.9
+ratio = 0.8
 good = []
 for m, n in matches:
     if m.distance < ratio * n.distance:
@@ -48,6 +48,7 @@ cv2.imshow("Player_B",Player_B)
 cv2.imshow("percent",percent)
 cv2.imshow('img', img3)
 
+cv2.imwrite('pictures/result.jpg', img3)
 
 
 cv2.waitKey(0)
